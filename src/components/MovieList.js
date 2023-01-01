@@ -1,11 +1,12 @@
 import React from 'react';
-
+import { useSelector } from 'react-redux';
 import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 
 const MovieList = (props)=> {
-    const movies = [];
-
+    
+    const movies = useSelector(state => state.movies);
+    
     return (
         <div className="col">
             <table className="table table-striped table-hover">
